@@ -93,7 +93,8 @@ namespace App
             int age = now.Year - dateOfBirth.Year;
             if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
 
-            if (age < 21)
+            var minAge = 21;
+            if (age < minAge)
             {
                 return false;
             }
